@@ -1,0 +1,15 @@
+# Variant 39. Deterministic config, validation by pydantic.
+variant: 39
+seed: 39
+dataset_id: fancyzhx/ag_news
+# Do not alter default split or label encoding 0..3.
+expected_train: 120000
+expected_test: 7600
+input_dir: data/raw
+report_dir: reports/LAB1
+min_token_length: 2
+max_top_terms: 12
+plot_max_tokens: 250
+max_stage_bytes: 1048576
+use_mlflow: true
+mlflow_experiment: lab1_ag_news_v39

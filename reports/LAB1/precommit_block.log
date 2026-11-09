@@ -1,0 +1,15 @@
+# Real negative-control git commit tests (temporary repositories)
+# Every test attempts `git commit`; return code must be nonzero
+
+CASE 01_style: PASS BLOCKED
+exit_code=1
+BLOCK syntax: broken.py:1: invalid syntax
+
+CASE 02_secret: PASS BLOCKED
+exit_code=1
+BLOCK secret: secrets.env:1 (possible credential)
+
+CASE 03_large_file: PASS BLOCKED
+exit_code=1
+BLOCK large file: large_blob.bin (1048577 > 1048576 bytes)
+

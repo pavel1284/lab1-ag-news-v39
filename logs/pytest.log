@@ -1,0 +1,14 @@
+......                                                                   [100%]
+=============================== warnings summary ===============================
+tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
+tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
+  /opt/pyvenv/lib/python3.13/site-packages/seaborn/categorical.py:700: PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+    artists = ax.bxp(**boxplot_kws)
+
+tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
+tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
+  /mnt/data/lab1_ag_news_v39/lab1/eda.py:99: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+    fig.tight_layout()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+6 passed, 4 warnings in 2.83s

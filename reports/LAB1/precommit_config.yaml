@@ -1,0 +1,23 @@
+# All hooks are local; installation does not clone external repositories.
+# Raw datasets and experiment storage are excluded from git.
+repos:
+  - repo: local
+    hooks:
+      - id: lab1-style-and-syntax
+        name: LAB1 Python style, syntax and whitespace
+        entry: python scripts/check_precommit.py --check style --paths
+        language: system
+        pass_filenames: true
+        types: [file]
+      - id: lab1-no-secrets
+        name: LAB1 secret scanning
+        entry: python scripts/check_precommit.py --check secrets --paths
+        language: system
+        pass_filenames: true
+        types: [file]
+      - id: lab1-size-limit
+        name: LAB1 large file blocker
+        entry: python scripts/check_precommit.py --check size --paths
+        language: system
+        pass_filenames: true
+        types: [file]

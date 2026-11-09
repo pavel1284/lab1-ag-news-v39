@@ -1,0 +1,6 @@
+Before tampering: PASS
+MATCH data/raw/train.csv
+MATCH data/raw/test.csv
+After tampering: MISMATCH EXPECTED
+FAIL SHA256/SIZE data/raw/train.csv
+MATCH data/raw/test.csv

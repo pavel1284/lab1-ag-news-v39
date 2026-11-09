@@ -1,0 +1,22 @@
+# Raw/cached datasets, models, local experiment storage
+data/raw/
+.cache/
+mlruns/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+*.egg-info/
+# Test injection files, not intended for git
+.negative_cases/
+# Generated reports are tracked; temporary outputs are not
+*.tmp
+*.bak
+.DS_Store

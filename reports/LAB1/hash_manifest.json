@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "pending_download",
+  "dataset": "AG News",
+  "source": "https://huggingface.co/datasets/fancyzhx/ag_news",
+  "note": "No local raw CSV, no SHA256 hashes were invented.",
+  "files": []
+}

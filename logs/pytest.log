@@ -1,4 +1,4 @@
-......                                                                   [100%]
+.......                                                                  [100%]
 =============================== warnings summary ===============================
 tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
 tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
@@ -11,4 +11,4 @@ tests/test_lab1.py::test_eda_runs_reproducibly_on_small_fixture
     fig.tight_layout()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-6 passed, 4 warnings in 2.83s
+7 passed, 4 warnings in 2.80s

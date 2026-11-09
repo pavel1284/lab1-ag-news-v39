@@ -42,6 +42,12 @@ def test_wrong_rows_rejected(tmp_path):
         load_split(dest, 2, "train")
 
 
+def test_pending_manifest_rejected(tmp_path):
+    path = tmp_path / "hash_manifest.json"
+    path.write_text('{"status": "pending_download", "files": []}', encoding="utf-8")
+    assert not verify_manifest(path)[0]
+
+
 def test_hash_tamper_rejected(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     write_csv(Path("data/raw/train.csv"), [("hello", 0)])

@@ -41,6 +41,8 @@ def verify_manifest(manifest_path: Path) -> tuple[bool, list[str]]:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     except (FileNotFoundError, ValueError) as error:
         return False, [f"Manifest missing or unreadable: {error}"]
+    if manifest.get("status") == "pending_download" or not manifest.get("files"):
+        return False, ["MISSING RAW FILES: manifest awaits real download and SHA256 calculation"]
     results = []
     valid = True
     for item in manifest["files"]:

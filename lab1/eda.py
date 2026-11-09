@@ -111,11 +111,13 @@ def topic_terms_plot(top_terms: list[dict], out: Path) -> None:
                         ax=ax, color="#478fa7", errorbar=None)
             for i, val in enumerate(relevant):
                 ax.text(val["frequency"], i, f" {val['frequency']:,}", va="center", fontsize=8)
+        if relevant:
+            ax.set_xlim(0, max(v["frequency"] for v in relevant) * 1.35)
         ax.set_title(CLASSES[label])
         ax.set_xlabel("Occurrences in training documents")
         ax.set_ylabel("")
     fig.suptitle("Most frequent non-stopword terms by topic", fontweight="bold")
-    fig.tight_layout()
+    fig.subplots_adjust(top=0.90, bottom=0.10, left=0.12, right=0.98, hspace=0.47, wspace=0.38)
     fig.savefig(out, dpi=165)
     plt.close(fig)
 

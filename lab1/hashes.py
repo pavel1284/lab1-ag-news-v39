@@ -69,7 +69,11 @@ def main() -> None:
         created = create_manifest(Path(args.dir), manifest, "https://huggingface.co/datasets/fancyzhx/ag_news")
         print(json.dumps(created, ensure_ascii=False, indent=2))
     else:
-        if args.optional and not manifest.exists():
+        if args.optional and (
+            not manifest.exists()
+            or json.loads(manifest.read_text(encoding="utf-8")).get("status")
+            == "pending_download"
+        ):
             print("SKIP: raw dataset not downloaded in this environment")
             return
         valid, messages = verify_manifest(manifest)

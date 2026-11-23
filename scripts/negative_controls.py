@@ -27,7 +27,7 @@ def blocked_commit_tests(destination: Path) -> None:
         git(folder, "add", "README.md")
         git(folder, "commit", "-qm", "baseline")
         hook = folder / ".git" / "hooks" / "pre-commit"
-        hook.write_text(f"#!/bin/sh\nexec {sys.executable} scripts/check_precommit.py --staged\n", encoding="utf-8")
+        hook.write_text("#!/bin/sh\nexec python scripts/check_precommit.py --staged\n", encoding="utf-8")
         os.chmod(hook, 0o755)
         examples = [
             ("01_style", "broken.py", b"def invalid(:\n    pass\n"),

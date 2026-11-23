@@ -1,8 +1,18 @@
 {
   "schema_version": 1,
-  "status": "pending_download",
   "dataset": "AG News",
   "source": "https://huggingface.co/datasets/fancyzhx/ag_news",
-  "note": "No local raw CSV, no SHA256 hashes were invented.",
-  "files": []
+  "verified_at_utc": "2026-11-23T07:31:04.881677+00:00",
+  "files": [
+    {
+      "path": "data/raw/train.csv",
+      "bytes": 28924927,
+      "sha256": "aa1eacef4c2c14b4d79ce593be6460b6bd25da42b08cbf78f84f4e9d1bcd444a"
+    },
+    {
+      "path": "data/raw/test.csv",
+      "bytes": 1822708,
+      "sha256": "7f524a9977e1849efd8ba1c671a1d6dfa6c841026b62a4fb86b3a85d7ea41240"
+    }
+  ]
 }

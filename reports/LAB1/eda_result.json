@@ -1,0 +1,32 @@
+{
+  "n_train": 120000,
+  "n_test": 7600,
+  "train_count_per_class": {
+    "World": 30000,
+    "Sports": 30000,
+    "Business": 30000,
+    "Sci/Tech": 30000
+  },
+  "test_count_per_class": {
+    "World": 1900,
+    "Sports": 1900,
+    "Business": 1900,
+    "Sci/Tech": 1900
+  },
+  "empty_train": 0,
+  "empty_test": 0,
+  "train_duplicates": 0,
+  "test_duplicates": 0,
+  "train_test_overlap": 0,
+  "vocab_size": 77563,
+  "hapax_share_pct": 37.428929,
+  "median_words": 37.0,
+  "p90_words": 48.0,
+  "max_overlap_topics": {
+    "pair": "Business / Sci/Tech",
+    "jaccard": 0.15606936416184972
+  },
+  "eda_csv_sha256": "cc2178e3dd54aacedd56cd20c5e9ae92c1706a3548c3aca90c2a22bfeb869465",
+  "git_commit": "40563724a4080dc889a46274eae45b883e384298",
+  "run_id": "d986ae6f32b64849a154499cbf667e99"
+}

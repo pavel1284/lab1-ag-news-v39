@@ -129,7 +129,7 @@ def main() -> None:
         if not line:
             i += 1
             continue
-        img = re.fullmatch(r"!\[(.*?)\]\((.*?)\)", line)
+        img = re.fullmatch(r"(?:\d+\.\s*)?!\[(.*?)\]\((.*?)\)", line)
         if img:
             dest = (INPUT.parent / img.group(2)).resolve()
             if dest.exists():
